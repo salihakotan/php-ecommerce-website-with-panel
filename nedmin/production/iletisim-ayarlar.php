@@ -54,44 +54,85 @@
                             class="form-horizontal form-label-left">
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_title">Tel no
-                                    <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Telefon Numarası
+                                    <span class="requiredé">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_title" value="<?= $ayarcek['ayar_tel'] ?>" type="text"
-                                        id="ayar_title" required="required" class="form-control col-md-7 col-xs-12">
+                                    <input name="ayar_tel" value="<?= $ayarcek['ayar_tel'] ?>" type="text"
+                                         required="required" class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Telefon Numarası (GSM)
+                                    <span class="requiredé">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input name="ayar_gsm" value="<?= $ayarcek['ayar_gsm'] ?>" type="text"
+                                         required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_description">Site
-                                    Açıklaması <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Fax Numarası
+                                    <span class="requiredé">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_description" value="<?= $ayarcek['ayar_description'] ?>"
-                                        type="text" id="ayar_description" required="required"
-                                        class="form-control col-md-7 col-xs-12">
+                                    <input name="ayar_fax" value="<?= $ayarcek['ayar_fax'] ?>" type="text"
+                                         required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Anahtar Kelimeler <span
-                                        class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Mail adresi
+                                    <span class="requiredé">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_keywords" value="<?= $ayarcek['ayar_keywords'] ?>" type="text"
-                                        id="ayar_keywords" required="required" class="form-control col-md-7 col-xs-12">
+                                    <input name="ayar_mail" value="<?= $ayarcek['ayar_mail'] ?>" type="email"
+                                         required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_author">Yazar <span
-                                        class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">İl
+                                    <span class="requiredé">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_author" value="<?= $ayarcek['ayar_author'] ?>" type="text"
-                                        id="ayar_author" required="required" class="form-control col-md-7 col-xs-12">
+                                    <input name="ayar_il" value="<?= $ayarcek['ayar_il'] ?>" type="text"
+                                         required="required" class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">İlçe
+                                    <span class="requiredé">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input name="ayar_ilce" value="<?= $ayarcek['ayar_ilce'] ?>" type="text"
+                                         required="required" class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Adres
+                                    <span class="requiredé">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <textarea class="form-control col-md-7 col-xs-12" name="ayar_adres"   required="required"  class="form-control" rows="3"><?= $ayarcek['ayar_adres'] ?></textarea>
+
+                                
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Mesai
+                                    <span class="requiredé">*</span>
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input name="ayar_mesai" value="<?= $ayarcek['ayar_mesai'] ?>" type="text"
+                                         required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
