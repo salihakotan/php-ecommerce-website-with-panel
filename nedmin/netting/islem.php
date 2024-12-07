@@ -119,7 +119,8 @@ if (isset($_POST["mailayarkaydet"])) {
     $ayarkaydet = $db->prepare(query: "UPDATE ayar SET 
     ayar_smtphost=:ayar_smtphost,
     ayar_smtppassword=:ayar_smtppassword,
-    ayar_smtpport=:ayar_smtpport
+    ayar_smtpport=:ayar_smtpport,
+    ayar_smtpuser=:ayar_smtpuser
      WHERE ayar_id=0    
      ");
 
@@ -128,6 +129,7 @@ if (isset($_POST["mailayarkaydet"])) {
         "ayar_smtphost" => $_POST["ayar_smtphost"],
         "ayar_smtppassword" => $_POST["ayar_smtppassword"],
         "ayar_smtpport" => $_POST["ayar_smtpport"],
+        "ayar_smtpuser" => $_POST["ayar_smtpuser"]
     ));
 
 
