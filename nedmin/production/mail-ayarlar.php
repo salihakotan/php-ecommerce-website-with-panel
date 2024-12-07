@@ -9,7 +9,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>API Ayarları <small>
+                        <h2>Mail Ayarları <small>
 
                                 <?php
                                 if (!isset($_GET['durum'])) {
@@ -54,41 +54,42 @@
                             class="form-horizontal form-label-left">
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_title">Analystic API
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_title">SMTP Host
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_analystic" value="<?= $ayarcek['ayar_analystic'] ?>" type="text"
+                                    <input name="ayar_smtphost" value="<?= $ayarcek['ayar_smtphost'] ?>" type="text"
                                         id="ayar_title" required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_description">Maps API <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_description">SMTP Şifre <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_maps" value="<?= $ayarcek['ayar_maps'] ?>"
+                                    <input name="ayar_smtppassword" value="<?= $ayarcek['ayar_smtppassword'] ?>"
                                         type="text" id="ayar_description" required="required"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Zopim API <span
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">SMTP Port <span
                                         class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_zopim" value="<?= $ayarcek['ayar_zopim'] ?>" type="text"
+                                    <input name="ayar_smtpport" value="<?= $ayarcek['ayar_smtpport'] ?>" type="text"
                                         id="ayar_keywords" required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
+                            
 
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6  col-md-offset-3 d-flex justify-content-end">
-                                    <button name="apiayarkaydet" type="submit"
+                                    <button name="mailayarkaydet" type="submit"
                                         class="btn btn-success pull-right">Güncelle</button>
 
                                 </div>

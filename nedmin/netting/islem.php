@@ -65,7 +65,7 @@ if (isset($_POST["iletisimayarkaydet"])) {
 }
 
 
-if(isset($_POST["apiayarkaydet"])){
+if (isset($_POST["apiayarkaydet"])) {
     $ayarkaydet = $db->prepare("UPDATE ayar SET
     ayar_analystic=:ayar_analystic,
     ayar_maps=:ayar_maps,
@@ -79,43 +79,64 @@ if(isset($_POST["apiayarkaydet"])){
         "ayar_zopim" => $_POST["ayar_zopim"]
     ));
 
-    if($update){
+    if ($update) {
         header("Location:../production/api-ayarlar.php?durum=ok");
-    }else {
+    } else {
         header("Location:../production/api-ayarlar.php?durum=no");
 
     }
 }
 
 
-if(isset($_POST["sosyalayarkaydet"])){
-    $ayarkaydet=$db->prepare("UPDATE ayar SET
+if (isset($_POST["sosyalayarkaydet"])) {
+    $ayarkaydet = $db->prepare("UPDATE ayar SET
             ayar_facebook=:ayar_facebook,
             ayar_google=:ayar_google,
             ayar_youtube=:ayar_youtube,
             ayar_twitter=:ayar_twitter
             WHERE ayar_id=0
     ");
-    $update=$ayarkaydet->execute((array(
-        "ayar_facebook"=> $_POST["ayar_facebook"],
-        "ayar_twitter"=> $_POST["ayar_twitter"],
-        "ayar_google"=> $_POST["ayar_google"],
-        "ayar_youtube"=> $_POST["ayar_youtube"],
+    $update = $ayarkaydet->execute((array(
+        "ayar_facebook" => $_POST["ayar_facebook"],
+        "ayar_twitter" => $_POST["ayar_twitter"],
+        "ayar_google" => $_POST["ayar_google"],
+        "ayar_youtube" => $_POST["ayar_youtube"],
 
     )));
 
-if($update){
-    header("Location:../production/sosyal-ayarlar.php?durum=ok");
-}else{
-    header("Location:../production/sosyal-ayarlar.php?durum=false");
+    if ($update) {
+        header("Location:../production/sosyal-ayarlar.php?durum=ok");
+    } else {
+        header("Location:../production/sosyal-ayarlar.php?durum=false");
+
+    }
 
 }
 
+
+
+if (isset($_POST["mailayarkaydet"])) {
+    $ayarkaydet = $db->prepare(query: "UPDATE ayar SET 
+    ayar_smtphost=:ayar_smtphost,
+    ayar_smtppassword=:ayar_smtppassword,
+    ayar_smtpport=:ayar_smtpport
+     WHERE ayar_id=0    
+     ");
+
+
+    $update = $ayarkaydet->execute(array(
+        "ayar_smtphost" => $_POST["ayar_smtphost"],
+        "ayar_smtppassword" => $_POST["ayar_smtppassword"],
+        "ayar_smtpport" => $_POST["ayar_smtpport"],
+    ));
+
+
+    if ($update) {
+        header("Location:../production/mail-ayarlar.php?durum=ok");
+    } else {
+        header("Location:../production/mail-ayarlar.php?durum=no");
+    }
 }
-
-
-
-
 
 
 ?>
