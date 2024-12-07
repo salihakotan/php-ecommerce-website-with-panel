@@ -2,9 +2,9 @@
 
 try {
     $db = new PDO("mysql:host=localhost;dbname=eticaret;charset=utf8","root","");
-    echo 'connected successfully';
+   // echo 'connected successfully';
 } catch (PDOException $e) {
-    echo $e->getMessage();
+   // echo $e->getMessage();
 }
 
 

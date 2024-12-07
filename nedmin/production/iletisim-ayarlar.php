@@ -9,7 +9,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Genel Ayarlar <small>
+                        <h2>İletişim Ayarları <small>
 
                                 <?php
                                 if (!isset($_GET['durum'])) {
@@ -54,11 +54,11 @@
                             class="form-horizontal form-label-left">
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_title">Site Başlığı
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ayar_title">Tel no
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input name="ayar_title" value="<?= $ayarcek['ayar_title'] ?>" type="text"
+                                    <input name="ayar_title" value="<?= $ayarcek['ayar_tel'] ?>" type="text"
                                         id="ayar_title" required="required" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
@@ -98,7 +98,7 @@
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6  col-md-offset-3 d-flex justify-content-end">
-                                    <button name="genelayarkaydet" type="submit"
+                                    <button name="iletisimayarkaydet" type="submit"
                                         class="btn btn-success pull-right">Güncelle</button>
 
                                 </div>
